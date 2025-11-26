@@ -1,0 +1,71 @@
+# ESG Funds in Europe: Code and Data Replication
+
+This repository contains the complete Python code and supporting materials used to generate the results in the research paper:
+
+**"ESG Funds in Europe: Performance, Structural Patterns, and Predictability in High-Dimensional Financial Data"**  
+*Marco Pellegrino, 2025*
+
+## 📄 Paper Abstract
+
+The study investigates whether European ESG funds systematically differ from non-ESG funds in terms of risk-adjusted performance, latent structural patterns, and predictability from financial fundamentals. Leveraging a large-scale, cross-sectional dataset of over 67,000 mutual funds and ETFs (as of December 2023), the analysis combines econometric models with machine learning techniques—including PCA, t-SNE, K-Means clustering, and logistic regression. The findings show that ESG funds exhibit modestly higher Sharpe ratios, partial clustering under non-linear projections, and moderate predictability (~64%) of ESG status based on financial features.
+
+## 📁 Repository Structure
+
+esg-funds-europe/
+├── data/ # Cleaned datasets used for analysis (CSV format)
+├── figures/ # Output figures used in the paper
+├── esg_analysis_script.py # Main Python script (unified workflow)
+├── requirements.txt # Python libraries and dependencies
+└── README.md # This documentation file
+
+## ⚙️ Requirements
+
+The code was written in **Python 3.9+**, using the following main packages:
+
+- `pandas`, `numpy`
+- `scikit-learn` (PCA, t-SNE, logistic regression, clustering)
+- `statsmodels` (OLS regression)
+- `matplotlib`, `seaborn` (plots)
+
+Install all dependencies via:
+
+pip install -r requirements.txt
+
+
+🚀 How to Run
+To reproduce the main results and figures:
+
+
+
+python esg_analysis_script.py
+Make sure the datasets (risultati_fondi_etf_morningstar_completi.csv, df_analysis_output.csv, etc.) are placed inside the /data/ folder.
+
+🧠 Methods Summary
+The analysis pipeline includes:
+
+Descriptive analysis (returns, volatility, Sharpe ratios)
+
+OLS regression with robust standard errors
+
+Dimensionality reduction: PCA and t-SNE
+
+K-Means clustering
+
+Logistic classification of ESG status
+
+All procedures are fully reproducible from a single script.
+
+📊 Data Notes
+The dataset includes over 67,000 European mutual funds and ETFs as of December 2023, retrieved from Morningstar.
+ESG classification is based on Morningstar sustainability labels (Globe Rating, ESG Mandate, Low Carbon badges).
+Raw Morningstar data is not shared due to licensing restrictions. However, pre-processed analytical outputs (without proprietary identifiers) are included in the /data folder.
+
+📎 Citation
+If you use this code, please cite the paper as:
+
+Pellegrino, M. (2025). ESG Funds in Europe: Performance, Structural Patterns, and Predictability in High-Dimensional Financial Data.
+📬 Contact
+For questions or academic collaboration, contact: dott.marco.pellegrino@gmail.com
+Or visit: https://github.com/dottmarcopellegrino
+
+This repository supports open science and reproducibility in sustainable finance research.
